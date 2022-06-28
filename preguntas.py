@@ -47,11 +47,11 @@ def pregunta_02():
     for _ in range(n_iterations):
 
         # Compute el pronóstico con los parámetros actuales
-        y_pred = np.matmul(x_poly, params)
+        y_pred = np.dot(x_poly, params)
         print(y_pred)
         
         # Calcule el error
-        error = y - y_pred
+        error = y_pred - y
 
         # Calcule el gradiente
         gradient = np.dot(x_poly.T, error)
